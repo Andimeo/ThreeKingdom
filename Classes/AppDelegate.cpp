@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
+#include "Game/TimeMechine.h"
 
 USING_NS_CC;
 
@@ -28,7 +29,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // create a scene. it's an autorelease object
     auto scene = HelloWorld::createScene();
-
+	TimeMechine::getInstance()->Resume();
     // run
     director->runWithScene(scene);
 

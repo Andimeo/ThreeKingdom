@@ -10,6 +10,12 @@
     <Filter Include="resource">
       <UniqueIdentifier>{715254bc-d70b-4ec5-bf29-467dd3ace079}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes\Game">
+      <UniqueIdentifier>{bb432b39-0374-4bf5-abbd-90215e5ddb6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\DataModel">
+      <UniqueIdentifier>{a3cf59a8-8bc2-4715-950d-315f4109f1b6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -21,6 +27,9 @@
     <ClCompile Include="..\Classes\HelloWorldScene.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\Game\TimeMechine.cpp">
+      <Filter>Classes\Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -31,6 +40,12 @@
     </ClInclude>
     <ClInclude Include="..\Classes\HelloWorldScene.h">
       <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DataModel\BaseModel.h">
+      <Filter>Classes\DataModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\TimeMechine.h">
+      <Filter>Classes\Game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
