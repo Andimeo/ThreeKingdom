@@ -12,7 +12,7 @@ public :
 	{
 	}
 
-	virtual void OnTimeChange(GameTime curtime) = 0;
+	virtual void onTimeChange(GameTime curtime) = 0;
 };
 
 class TimeMechine 
@@ -23,26 +23,31 @@ private:
 public:
 	static TimeMechine* getInstance();
 public:
-	void Start(GameTime starttime);
-	void Stop();
-	void Pause();
-	void Resume();
-	void AddTimeChangeListener(ITimeChangeListener* listener)
+	void start(GameTime starttime);
+	void stop();
+	void pause();
+	void resume();
+	void addTimeChangeListener(ITimeChangeListener* listener)
 	{
 		mAllListeners.push_back(listener);
 	}
 
-	void RemoveTimeChangeListener(ITimeChangeListener* listener);
-	void SetSpeed(int framesPerHour)
+	void removeTimeChangeListener(ITimeChangeListener* listener);
+	void setSpeed(int framesPerHour)
 	{
 		mTimeSpeed = framesPerHour;
 	}
 public:
 	void update(float dt);
 private:
+	void moveListeners();
+	bool tobeMoved(ITimeChangeListener* listener);
+private:
 	GameTime mCurTime;
 	int mTimeSpeed;
 	int mCurFrames;
+	bool mIsRunning;
 	std::vector<ITimeChangeListener*> mAllListeners;
+	std::vector<ITimeChangeListener*> mListenersTobeMoved;
 };
 

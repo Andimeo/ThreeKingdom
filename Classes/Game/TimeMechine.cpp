@@ -7,7 +7,8 @@ static TimeMechine* s_TimeMechine = NULL;
 TimeMechine::TimeMechine(void)
 {
 	memset(&mCurTime,0,sizeof(mCurTime));
-	mTimeSpeed =60;
+	mTimeSpeed =10;
+	mIsRunning = false;
 }
 
 
@@ -23,37 +24,38 @@ TimeMechine* TimeMechine::getInstance()
 	}
 	return s_TimeMechine;
 }
-void TimeMechine::Start(GameTime starttime)
+void TimeMechine::start(GameTime starttime)
 {
 	mCurTime = starttime;
 }
-void TimeMechine::Stop()
+void TimeMechine::stop()
 {
 }
-void TimeMechine::Pause()
+void TimeMechine::pause()
 {
-	Director::getInstance()->getScheduler()->unscheduleUpdate(this);
-}
-void TimeMechine::Resume()
-{
-	Director::getInstance()->getScheduler()->scheduleUpdate(
-		this,-1,false);
-	mCurFrames = 0;
-}
-
-
-void TimeMechine::RemoveTimeChangeListener(ITimeChangeListener* listener)
-{
-	auto it = mAllListeners.begin();
-	for (; mAllListeners.end()!=it; it++)
+	if(mIsRunning)
 	{
-		if(listener == (*it))
-		{
-			mAllListeners.erase(it);
-			break;
-		}
+		mIsRunning = false;
+		Director::getInstance()->getScheduler()->unscheduleUpdate(this);
 	}
 }
+void TimeMechine::resume()
+{
+	if(!mIsRunning)
+	{
+		mIsRunning = true;
+		Director::getInstance()->getScheduler()->scheduleUpdate(
+			this,-1,false);
+		mCurFrames = 0;
+	}
+}
+
+
+void TimeMechine::removeTimeChangeListener(ITimeChangeListener* listener)
+{
+	mListenersTobeMoved.push_back(listener);
+}
+
 void TimeMechine::update(float dt)
 {
 	mCurFrames++;
@@ -64,9 +66,42 @@ void TimeMechine::update(float dt)
 		auto it = mAllListeners.begin();
 		for (; mAllListeners.end()!=it; it++)
 		{
-			(*it)->OnTimeChange(mCurTime);
+			if(!tobeMoved(*it))
+			{
+				(*it)->onTimeChange(mCurTime);
+			}
 		}
-		printf("cur time:%d:%d:%d:%d\n",mCurTime.year,
-			mCurTime.month,mCurTime.day,mCurTime.hour);
+		moveListeners();
 	}
+}
+
+
+bool TimeMechine::tobeMoved(ITimeChangeListener* listener)
+{
+	auto it = mListenersTobeMoved.begin();
+	for(; mListenersTobeMoved.end() != it;it++)
+	{
+		if(listener == (*it))
+		{
+			return true;
+		}
+	}
+	return false;
+}
+void TimeMechine::moveListeners()
+{
+	auto i = mListenersTobeMoved.begin();
+	for(;mListenersTobeMoved.end()!=i;i++)
+	{
+		auto it = mAllListeners.begin();
+		for (; mAllListeners.end()!=it; it++)
+		{
+			if((*i) == (*it))
+			{
+				mAllListeners.erase(it);
+				break;
+			}
+		}
+	}
+	mListenersTobeMoved.clear();
 }

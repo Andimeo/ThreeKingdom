@@ -29,7 +29,12 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // create a scene. it's an autorelease object
     auto scene = HelloWorld::createScene();
-	TimeMechine::getInstance()->Resume();
+	GameTime curtime;
+	curtime.year = 190;
+	curtime.month =1;
+	curtime.day = 1;
+	curtime.hour = 0;
+	TimeMechine::getInstance()->start(curtime);
     // run
     director->runWithScene(scene);
 

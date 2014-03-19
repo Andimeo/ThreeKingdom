@@ -16,6 +16,9 @@
     <Filter Include="Classes\DataModel">
       <UniqueIdentifier>{a3cf59a8-8bc2-4715-950d-315f4109f1b6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes\GameScene">
+      <UniqueIdentifier>{c86c77e5-572a-4d22-b5dc-3a02007654aa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -29,6 +32,9 @@
     </ClCompile>
     <ClCompile Include="..\Classes\Game\TimeMechine.cpp">
       <Filter>Classes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameScene\MainScene.cpp">
+      <Filter>Classes\GameScene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -46,6 +52,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\Game\TimeMechine.h">
       <Filter>Classes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameScene\MainScene.h">
+      <Filter>Classes\GameScene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
