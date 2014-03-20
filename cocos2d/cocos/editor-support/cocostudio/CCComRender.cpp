@@ -50,7 +50,7 @@ ComRender::~ComRender(void)
 
 void ComRender::onEnter()
 {
-    if (_owner != nullptr)
+    if (_owner != nullptr && nullptr != _render)
     {
         _owner->addChild(_render);
     }
