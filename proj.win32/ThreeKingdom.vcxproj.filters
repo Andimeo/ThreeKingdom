@@ -36,6 +36,9 @@
     <ClCompile Include="..\Classes\GameScene\MainScene.cpp">
       <Filter>Classes\GameScene</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\GameScene\MessageDialog.cpp">
+      <Filter>Classes\GameScene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -54,6 +57,9 @@
       <Filter>Classes\Game</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\GameScene\MainScene.h">
+      <Filter>Classes\GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameScene\MessageDialog.h">
       <Filter>Classes\GameScene</Filter>
     </ClInclude>
   </ItemGroup>

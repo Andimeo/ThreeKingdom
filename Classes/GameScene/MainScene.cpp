@@ -1,12 +1,14 @@
 #include "MainScene.h"
 #include "CocoStudio.h"
 #include "ui/CocosGUI.h"
+#include "MessageDialog.h"
 
 using namespace cocostudio;
 using namespace cocos2d::ui;
 
 MainScene::~MainScene()
 {
+	TimeMechine::getInstance()->removeTimeChangeListener(this);
 }
 
 MainScene::MainScene()
@@ -52,8 +54,12 @@ void MainScene::onTimeChange( GameTime curtime )
 		{
 			pHero->getAnimation()->play("attack"); 
 		}
+		MessageDialog::getInstance()->hide();
 	}
-
+	else
+	{
+		MessageDialog::getInstance()->show();
+	}
 	ComRender* pTitle =(ComRender*) pNode->getChildByTag(10046)->getComponent("title");
 	Text* year = (Text*)pTitle->getNode()->getChildByTag(12);
 	Text* month = (Text*)pTitle->getNode()->getChildByTag(13);
