@@ -62,6 +62,9 @@
     <ClInclude Include="..\Classes\GameScene\MessageDialog.h">
       <Filter>Classes\GameScene</Filter>
     </ClInclude>
+    <ClInclude Include="General.h">
+      <Filter>Classes\DataModel</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">
