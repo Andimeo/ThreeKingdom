@@ -13,6 +13,7 @@ public :
 	}
 
 	virtual void onTimeChange(GameTime curtime) = 0;
+	virtual void onTimeFly(long dayPassed, GameTime curtime) = 0;
 };
 
 class TimeMechine 
@@ -37,6 +38,8 @@ public:
 	{
 		mTimeSpeed = framesPerHour;
 	}
+
+	void timeFly(long days);
 public:
 	void update(float dt);
 private:

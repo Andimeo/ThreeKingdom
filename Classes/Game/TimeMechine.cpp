@@ -61,17 +61,23 @@ void TimeMechine::update(float dt)
 	mCurFrames++;
 	if(mCurFrames >= mTimeSpeed)
 	{
+		boolean isNextDay = false;
+		if (mCurTime.hour == 23){
+			isNextDay = true;
+		}
 		mCurTime.addhours(1);
 		mCurFrames = 0;
-		auto it = mAllListeners.begin();
-		for (; mAllListeners.end()!=it; it++)
-		{
-			if(!tobeMoved(*it))
+		if (isNextDay){
+			auto it = mAllListeners.begin();
+			for (; mAllListeners.end()!=it; it++)
 			{
-				(*it)->onTimeChange(mCurTime);
+				if(!tobeMoved(*it))
+				{
+					(*it)->onTimeFly(1, mCurTime);
+				}
 			}
+			moveListeners();
 		}
-		moveListeners();
 	}
 }
 
@@ -104,4 +110,18 @@ void TimeMechine::moveListeners()
 		}
 	}
 	mListenersTobeMoved.clear();
+}
+
+void TimeMechine::timeFly(long days){
+	mCurTime.adddays(days);
+	auto it = mAllListeners.begin();
+	for (; mAllListeners.end()!=it; it++)
+	{
+		if(!tobeMoved(*it))
+		{
+			(*it)->onTimeChange(mCurTime);
+			(*it)->onTimeFly(days, mCurTime);
+		}
+	}
+	moveListeners();
 }

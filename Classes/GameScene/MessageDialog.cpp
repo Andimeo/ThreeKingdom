@@ -12,7 +12,8 @@ bool MessageDialog::init()
 	{
 		return false;
 	}
-	addChild(GUIReader::getInstance()->widgetFromJsonFile("ui/CommonDilog.json"));
+	mWidget = GUIReader::getInstance()->widgetFromJsonFile("ui/CommonDilog.json");
+	addChild(mWidget);
 	return true;
 }
 
@@ -58,3 +59,10 @@ void MessageDialog::hide()
 	}
 }
 
+void MessageDialog::setContent(std::string content){
+	Widget* contentWidget = mWidget->getChildByName("dialog")->getChildByName("message");
+	Text* message = dynamic_cast<Text*> (contentWidget);
+	if (nullptr != message){
+		message->setText(content);
+	}
+}

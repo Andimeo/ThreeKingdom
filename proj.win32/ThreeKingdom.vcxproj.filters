@@ -39,6 +39,15 @@
     <ClCompile Include="..\Classes\GameScene\MessageDialog.cpp">
       <Filter>Classes\GameScene</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\Game\GameLogicController.cpp">
+      <Filter>Classes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game\HistoryEventLogicController.cpp">
+      <Filter>Classes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\DataModel\GameEventBase.cpp">
+      <Filter>Classes\DataModel</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -61,6 +70,15 @@
     </ClInclude>
     <ClInclude Include="..\Classes\GameScene\MessageDialog.h">
       <Filter>Classes\GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\GameLogicController.h">
+      <Filter>Classes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\HistoryEventLogicController.h">
+      <Filter>Classes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DataModel\GameEventBase.h">
+      <Filter>Classes\DataModel</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

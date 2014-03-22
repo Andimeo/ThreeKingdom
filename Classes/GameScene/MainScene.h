@@ -13,6 +13,7 @@ public:
 protected:
 	virtual bool init();
 	virtual void onTimeChange(GameTime curtime);
+	virtual void onTimeFly(long timePassed, GameTime curtime);
 	void menuStartCallback(cocos2d::Ref* pSender);
 private:
 	LabelTTF* mTimeLabel;

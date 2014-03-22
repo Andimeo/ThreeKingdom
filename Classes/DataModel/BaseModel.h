@@ -19,17 +19,49 @@ public:
 
 	void adddays(int days)
 	{
-		day += days;
-		auto deltaMonth = day/30;
-		day = day % 24;
-		addmonths(deltaMonth);
+		long allDays = GameTime::toLong(*this);
+		allDays += days;
+		GameTime newTime = GameTime::toGameTime(allDays);
+		this->year = newTime.year;
+		this->month = newTime.month;
+		this->day = newTime.day;
 	}
 
 	void addmonths(int months)
 	{
-		month += months;
-		auto deltayear = month/12;
-		month = month % 24;
-		year += deltayear;
+		long allDays = GameTime::toLong(*this);
+		allDays += months * 30;
+		GameTime newTime = GameTime::toGameTime(allDays);
+		this->year = newTime.year;
+		this->month = newTime.month;
+		this->day = newTime.day;
+	}
+
+	// Return Days From Common era, Every month has 30 days, Every Year has 12 months
+	static long toLong(GameTime gameTime){
+		long days = gameTime.year * (12 * 30) + (gameTime.month - 1) * 30 + gameTime.day;
+		return days;
+	}
+
+	static GameTime toGameTime(long days){
+		GameTime mDefaultTime;
+		mDefaultTime.day = 1;
+		mDefaultTime.month = 1;
+		mDefaultTime.year = 0;
+
+		if (days <= 0){
+			return mDefaultTime;
+		}
+
+		mDefaultTime.year = (days - 1) / (12 * 30);
+
+		days %= 12 * 30;
+		if (0 == days){
+			days = 12 * 30;
+		}
+
+		mDefaultTime.month = 1 + (days - 1) / 30;
+		mDefaultTime.day = days - 30 * (mDefaultTime.month - 1);
+		return mDefaultTime;
 	}
 };

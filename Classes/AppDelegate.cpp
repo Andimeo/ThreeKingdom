@@ -2,7 +2,8 @@
 #include "GameScene/MainScene.h"
 #include "Game/TimeMechine.h"
 #include "SimpleAudioEngine.h"
-
+#include "Game/GameLogicController.h"
+#include "Game/HistoryEventLogicController.h"
 USING_NS_CC;
 
 AppDelegate::AppDelegate() {
@@ -39,6 +40,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // run
     director->runWithScene(scene);
 
+	// initial
+	GameLogicController::getInstance()->init();
+	HistoryEventLogicController::getInstance()->initHistory();
     return true;
 }
 
