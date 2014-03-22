@@ -78,6 +78,9 @@
       <Filter>Classes\Game</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\DataModel\GameEventBase.h">
+		<Filter>Classes\DataModel</Filter>
+		</ClInclude>
+    <ClInclude Include="General.h">
       <Filter>Classes\DataModel</Filter>
     </ClInclude>
   </ItemGroup>

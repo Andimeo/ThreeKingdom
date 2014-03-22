@@ -9,6 +9,13 @@ public:
 	int day;
 	int hour;
 
+	void set_time(int year, int month, int day, int hour) {
+		this->year = year;
+		this->month = month;
+		this->day = day;
+		this->hour = hour;
+	}
+
 	void addhours(int hours)
 	{
 		hour += hours;

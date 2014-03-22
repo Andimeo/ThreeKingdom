@@ -6,6 +6,7 @@
   <Name>ThreeKindom</Name>
   <JsonFileName>ThreeKindom.json</JsonFileName>
   <JsonFolder>F:\Work\PatrickTeam\ThreeKingdom\Art\ThreeKindom\Json</JsonFolder>
+
   <JsonList>
     <string>CommonDilog.json</string>
   </JsonList>
