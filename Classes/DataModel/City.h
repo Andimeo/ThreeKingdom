@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include <set>
+#include "../Utility/CommonSet.h"
 
 using namespace std;
 
@@ -55,8 +55,8 @@ public:
 	int get_current_mayor();
 	City set_current_mayor(int current_mayor);
 
-	set<int> get_generals();
-	City set_generals(const set<int>& generals);
+	CommonSet<int> get_generals();
+	City set_generals(const CommonSet<int>& generals);
 
 	int get_soldiers();
 
@@ -70,9 +70,9 @@ public:
 	int add_people(int delta);
 	int add_disaster_proof(int delta);
 	int add_general(int general);
-	int add_generals(const set<int>& general_list);
+	int add_generals(const CommonSet<int>& general_list);
 	int remove_general(int general);
-	int remove_generals(const set<int>& general_list);
+	int remove_generals(const CommonSet<int>& general_list);
 
 	int add_unassigned_soldiers(int delta);
 private:
@@ -83,7 +83,7 @@ private:
 	int business; //对应产业值，实际为商业值，与4月份发gold相关
 	int people;
 	int disaster_proof;
-	set<int> generals;
+	CommonSet<int> generals;
 	
 	int current_country;
 	int current_mayor;

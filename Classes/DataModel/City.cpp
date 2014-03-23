@@ -123,11 +123,11 @@ City City::set_current_mayor(int current_mayor) {
 	return *this;
 }
 
-set<int> City::get_generals() {
+CommonSet<int> City::get_generals() {
 	return this->generals;
 }
 
-City City::set_generals(const set<int>& generals) {
+City City::set_generals(const CommonSet<int>& generals) {
 	this->generals = generals;
 	return *this;
 }
@@ -235,30 +235,29 @@ int City::add_disaster_proof(int delta) {
 }
 int City::add_general(int general) {
 	assert(this->generals.size() + 1 <= City_Generals_Num);
-	assert(this->generals.find(general) == this->generals.end());
-	this->generals.insert(general);
+	assert(!(this->generals.contains(general)));
+	this->generals.add(general);
 	return this->generals.size();
 }
 
-int City::add_generals(const set<int>& general_list) {
+int City::add_generals(const CommonSet<int>& general_list) {
 	assert(this->generals.size() + general_list.size() <= City_Generals_Num);
-	for(set<int>::iterator iter = general_list.begin(); iter != general_list.end(); iter++ ) {
-		assert(this->generals.find(*iter) == this->generals.end());
-		this->generals.insert(*iter);
+	for(auto iter = general_list.begin(); iter != general_list.end(); iter++ ) {
+		assert(!(this->generals.contains(*iter)));
+		this->generals.add(*iter);
 	}
 	return this->generals.size();
 }
 
 int City::remove_general(int general) {
-	set<int>::iterator iter = this->generals.find(general);
-	assert(iter != this->generals.end());
-	this->generals.erase(iter);
+	assert(this->generals.contains(general));
+	this->generals.remove(general);
 	return this->generals.size();
 }
 
-int City::remove_generals(const set<int>& general_list) {
-	for(set<int>::iterator iter = general_list.begin(); iter != general_list.end(); iter++ ) {
-		assert(this->generals.find(*iter) != this->generals.end());
+int City::remove_generals(const CommonSet<int>& general_list) {
+	for(auto iter = general_list.begin(); iter != general_list.end(); iter++ ) {
+		assert(this->generals.contains(*iter));
 		this->remove_general(*iter);
 	}
 	return this->generals.size();

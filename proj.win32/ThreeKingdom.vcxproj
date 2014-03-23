@@ -135,6 +135,7 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\DataModel\City.cpp" />
+    <ClCompile Include="..\Classes\DataModel\Country.cpp" />
     <ClCompile Include="..\Classes\DataModel\GameEventBase.cpp" />
     <ClCompile Include="..\Classes\DataModel\General.cpp" />
     <ClCompile Include="..\Classes\DataModel\GeneralManager.cpp" />
@@ -161,6 +162,7 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
     <ClInclude Include="..\Classes\Game\HistoryEventLogicController.h" />
     <ClInclude Include="..\Classes\Game\TimeMachine.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
+    <ClInclude Include="..\Classes\Utility\CommonSet.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>
