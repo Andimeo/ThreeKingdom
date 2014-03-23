@@ -1,10 +1,6 @@
 #include "MainScene.h"
-#include "CocoStudio.h"
-#include "ui/CocosGUI.h"
 #include "MessageDialog.h"
 
-using namespace cocostudio;
-using namespace cocos2d::ui;
 
 MainScene::~MainScene()
 {
@@ -23,51 +19,58 @@ bool MainScene::init()
 		return false;
 	}
 	//加载导出文件并初始化根节点
-	Node *pNode = SceneReader::getInstance()->createNodeWithSceneFile("publish/FightScene.json"); 
+	Node *pNode = SceneReader::getInstance()->createNodeWithSceneFile("publish/MainScene.json"); 
 
 	//通过tag获取音频组件
 	 ComAudio*  pAudio =(ComAudio* ) pNode->getComponent("CCBackgroundAudio"); 
 	//播放音频
 	pAudio->playBackgroundMusic(pAudio->getFile(), pAudio->isLoop()); 
 
+	ComRender* comrender = (ComRender*)pNode->getChildByTag(10028)->getComponent("Menu");
+	Button* pBtn = (Button*)comrender->getNode()->getChildByTag(53);
+	pBtn->addTouchEventListener(this,toucheventselector(MainScene::menuStartCallback));
+
+	ComRender* maprender = (ComRender*)pNode->getChildByTag(10026)->getComponent("Map");
+
 	//将根节点添加到新场景
 	this->addChild(pNode, 0, 1); 
-	TimeMachine::getInstance()->resume();
 	return true;
 }
 
-void MainScene::menuStartCallback( cocos2d::Ref* pSender )
+void MainScene::menuStartCallback( cocos2d::Ref* object ,TouchEventType type )
 {
+	if(TouchEventType::TOUCH_EVENT_ENDED == type)
+	{
+		Button* btn = (Button*)object;
+		btn->setVisible(false);
+		TimeMachine::getInstance()->resume();
+	}
 }
 
 void MainScene::onTimeChange( GameTime curtime )
 {
-	
-}
-
-void MainScene::onTimeFly(long dayPassed, GameTime curtime){
 	auto pNode = this->getChildByTag(1);
 
+	if(curtime.day % 10 ==0)
+	{
+		TimeMachine::getInstance()->pause();
+		ComRender* comrender = (ComRender*)pNode->getChildByTag(10028)->getComponent("Menu");
+		Button* pBtn = (Button*)comrender->getNode()->getChildByTag(53);
+		pBtn->setVisible(true);
+		pBtn->addTouchEventListener(this,toucheventselector(MainScene::menuStartCallback));
+	}
 	if(curtime.day % 2 ==0)
 	{
-		//获取comrender组件
-		ComRender *pHeroRender = (ComRender*)(pNode->getChildByTag(10005)->getComponent( "hero")); 
-		//转换为armature
-		Armature *pHero= (Armature *)(pHeroRender->getNode()); 
-		if(pHero->getAnimation()->getCurrentMovementID() != "attack")
-		{
-			pHero->getAnimation()->play("attack"); 
-		}
 		MessageDialog::getInstance()->hide();
 	}
 	else
 	{
 		MessageDialog::getInstance()->show();
 	}
-	ComRender* pTitle =(ComRender*) pNode->getChildByTag(10046)->getComponent("title");
-	Text* year = (Text*)pTitle->getNode()->getChildByTag(12);
-	Text* month = (Text*)pTitle->getNode()->getChildByTag(13);
-	Text* day = (Text*)pTitle->getNode()->getChildByTag(14);
+	ComRender* pTitle =(ComRender*) pNode->getChildByTag(10028)->getComponent("Menu");
+	Text* year = (Text*)pTitle->getNode()->getChildByTag(46);
+	Text* month = (Text*)pTitle->getNode()->getChildByTag(48);
+	Text* day = (Text*)pTitle->getNode()->getChildByTag(50);
 
 	char buf[16] ;
 

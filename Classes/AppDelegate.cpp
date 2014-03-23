@@ -43,8 +43,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
     director->runWithScene(scene);
 
 	// initial
-	GameLogicController::getInstance()->init();
-	HistoryEventLogicController::getInstance()->initHistory();
+	//GameLogicController::getInstance()->init();
+	//HistoryEventLogicController::getInstance()->initHistory();
     return true;
 }
 

@@ -1,7 +1,7 @@
 {
   "classname": "CCNode",
   "name": null,
-  "canedit": false,
+  "canedit": true,
   "objecttag": 10000,
   "rotation": 0,
   "scalex": 1,
@@ -16,13 +16,13 @@
       "classname": "CCNode",
       "name": null,
       "canedit": true,
-      "objecttag": 10004,
+      "objecttag": 10026,
       "rotation": 0,
       "scalex": 1,
       "scaley": 1,
       "visible": 1,
-      "x": 367.5,
-      "y": 441,
+      "x": 0,
+      "y": 0,
       "zorder": 1,
       "gameobjects": [],
       "components": [
@@ -32,8 +32,36 @@
           "name": "GUIComponent",
           "file": null,
           "fileData": {
-            "path": null,
-            "plistFile": null,
+            "path": "ui/Map.json",
+            "plistFile": "",
+            "resourceType": 0
+          }
+        }
+      ]
+    },
+    {
+      "__type": "ComGameObjectSurrogate:#EditorCommon.JsonModel",
+      "classname": "CCNode",
+      "name": null,
+      "canedit": true,
+      "objecttag": 10028,
+      "rotation": 0,
+      "scalex": 1,
+      "scaley": 1,
+      "visible": 1,
+      "x": 0,
+      "y": 0,
+      "zorder": 1,
+      "gameobjects": [],
+      "components": [
+        {
+          "__type": "ComGUIAdapterSurrogate:#EditorCommon.JsonModel.Component",
+          "classname": "GUIComponent",
+          "name": "Menu",
+          "file": null,
+          "fileData": {
+            "path": "ui/MapMenu.json",
+            "plistFile": "",
             "resourceType": 0
           }
         }
@@ -59,11 +87,11 @@
       "name": "CCBackgroundAudio",
       "file": null,
       "fileData": {
-        "path": null,
-        "plistFile": null,
+        "path": "sound/arena.mp3",
+        "plistFile": "",
         "resourceType": 0
       },
-      "loop": 0
+      "loop": 1
     }
   ]
 }
