@@ -2,15 +2,19 @@
 #include "GameScene/MainScene.h"
 #include "Game/TimeMechine.h"
 #include "SimpleAudioEngine.h"
+#include "PureMVC.hpp"
+#include "GameScene/MessageDialog.h"
 
 USING_NS_CC;
 
-AppDelegate::AppDelegate() {
-
+AppDelegate::AppDelegate() 
+{
+	PureMVC::createCache();
 }
 
 AppDelegate::~AppDelegate() 
 {
+	PureMVC::cleanCache();
 }
 
 bool AppDelegate::applicationDidFinishLaunching() {
@@ -36,6 +40,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 	curtime.day = 1;
 	curtime.hour = 0;
 	TimeMechine::getInstance()->start(curtime);
+	MessageDialog::getInstance();
     // run
     director->runWithScene(scene);
 
