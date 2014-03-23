@@ -48,6 +48,7 @@ int City::get_debut_country() {
 
 City City::set_debut_country(int country) {
 	this->immutable_attributes.debut_country = country;
+	return *this;
 }
 
 int City::get_gold() {
@@ -117,24 +118,25 @@ int City::get_current_mayor() {
 	return this->current_mayor;
 }
 
-City City::set_rice(int current_mayor) {
+City City::set_current_mayor(int current_mayor) {
 	this->current_mayor = current_mayor;
 	return *this;
 }
 
-list<int> City::get_generals() {
+set<int> City::get_generals() {
 	return this->generals;
 }
 
-City City::set_generals(const list<int>& generals) {
+City City::set_generals(const set<int>& generals) {
 	this->generals = generals;
+	return *this;
 }
 
 int City::get_soldiers() {
 	int result = this->unassigned_soldiers;
 	GeneralManager manager = GeneralManager::getInstance();
-	for(int i = 0 ; i < this->generals.size; i++ ) {
-		result += manager.get(this->generals[i]).get_soldiers();
+	for(set<int>::iterator iter = this->generals.begin(); iter != this->generals.end(); iter++ ) {
+		result += manager.get(*iter).get_soldiers();
 	}
 	return result;
 }
@@ -242,7 +244,7 @@ int City::add_generals(const set<int>& general_list) {
 	assert(this->generals.size() + general_list.size() <= City_Generals_Num);
 	for(set<int>::iterator iter = general_list.begin(); iter != general_list.end(); iter++ ) {
 		assert(this->generals.find(*iter) == this->generals.end());
-		this->generals.add(*iter);
+		this->generals.insert(*iter);
 	}
 	return this->generals.size();
 }
@@ -255,7 +257,7 @@ int City::remove_general(int general) {
 }
 
 int City::remove_generals(const set<int>& general_list) {
-	for(set<int>::iterator iter = general_list.begin(); iter != general_list.size(); iter++ ) {
+	for(set<int>::iterator iter = general_list.begin(); iter != general_list.end(); iter++ ) {
 		assert(this->generals.find(*iter) != this->generals.end());
 		this->remove_general(*iter);
 	}

@@ -56,13 +56,13 @@ public:
 	int get_soldiers();
 	General set_soldiers(int soldiers);
 
-	int add_virality(int delta); //这个delta可以为负
+	int add_vitality(int delta); //这个delta可以为负
 	int add_force(int delta);
 	int add_intelligence(int delta);
 	int add_morality(int delta);
 	int add_experience(int delta);
 	int add_soldiers(int delta); //这个delta可以为负
-	int add_virality_bound(int delta);
+	int add_vitality_bound(int delta);
 
 private:
 	ImmutableGeneralAttributes immutable_attributes;

@@ -128,7 +128,7 @@ General General::set_soldiers(int soldiers) {
 	return *this;
 }
 
-int General::add_virality(int delta) {
+int General::add_vitality(int delta) {
 	if(this->vitality + delta < 0) {
 		this->vitality = 0;
 		return -this->vitality;
@@ -136,7 +136,7 @@ int General::add_virality(int delta) {
 	if(this->vitality + delta > this->vitality_bound) {
 		int temp = this->vitality;
 		this->vitality = this->vitality_bound;
-		return this->add_virality_bound - temp;
+		return this->vitality_bound - temp;
 	}	
 	this->vitality += delta;
 	return delta;
@@ -180,7 +180,7 @@ int General::add_soldiers(int delta) {
 	return delta;
 }
 
-int General::add_virality_bound(int delta) {
+int General::add_vitality_bound(int delta) {
 	assert(delta >= 0);
 	this->vitality_bound += delta;
 	return delta;

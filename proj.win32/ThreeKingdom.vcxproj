@@ -134,12 +134,15 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\DataModel\City.cpp" />
     <ClCompile Include="..\Classes\DataModel\GameEventBase.cpp" />
+    <ClCompile Include="..\Classes\DataModel\Generalcpp.cpp" />
+    <ClCompile Include="..\Classes\DataModel\GeneralManager.cpp" />
     <ClCompile Include="..\Classes\GameScene\MainScene.cpp" />
     <ClCompile Include="..\Classes\GameScene\MessageDialog.cpp" />
     <ClCompile Include="..\Classes\Game\GameLogicController.cpp" />
     <ClCompile Include="..\Classes\Game\HistoryEventLogicController.cpp" />
-    <ClCompile Include="..\Classes\Game\TimeMechine.cpp" />
+    <ClCompile Include="..\Classes\Game\TimeMachine.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
     <ClCompile Include="..\Classes\PureMVC\src\CocosMVC.cpp" />
     <ClCompile Include="..\Classes\PureMVC\src\Core\Controller.cpp" />
@@ -158,12 +161,17 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\DataModel\BaseModel.h" />
+    <ClInclude Include="..\Classes\DataModel\City.h" />
+    <ClInclude Include="..\Classes\DataModel\Constants.h" />
+    <ClInclude Include="..\Classes\DataModel\Country.h" />
     <ClInclude Include="..\Classes\DataModel\GameEventBase.h" />
+    <ClInclude Include="..\Classes\DataModel\General.h" />
+    <ClInclude Include="..\Classes\DataModel\GeneralManager.h" />
     <ClInclude Include="..\Classes\GameScene\MainScene.h" />
     <ClInclude Include="..\Classes\GameScene\MessageDialog.h" />
     <ClInclude Include="..\Classes\Game\GameLogicController.h" />
     <ClInclude Include="..\Classes\Game\HistoryEventLogicController.h" />
-    <ClInclude Include="..\Classes\Game\TimeMechine.h" />
+    <ClInclude Include="..\Classes\Game\TimeMachine.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="..\Classes\PureMVC\include\CocosMVC.h" />
     <ClInclude Include="..\Classes\PureMVC\include\Core\Controller.hpp" />

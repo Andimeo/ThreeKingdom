@@ -8,12 +8,12 @@ using namespace cocos2d::ui;
 
 MainScene::~MainScene()
 {
-	TimeMechine::getInstance()->removeTimeChangeListener(this);
+	TimeMachine::getInstance()->removeTimeChangeListener(this);
 }
 
 MainScene::MainScene()
 {
-	TimeMechine::getInstance()->addTimeChangeListener(this);
+	TimeMachine::getInstance()->addTimeChangeListener(this);
 }
 
 bool MainScene::init()
@@ -32,7 +32,7 @@ bool MainScene::init()
 
 	//将根节点添加到新场景
 	this->addChild(pNode, 0, 1); 
-	TimeMechine::getInstance()->resume();
+	TimeMachine::getInstance()->resume();
 	return true;
 }
 

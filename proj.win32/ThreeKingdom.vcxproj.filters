@@ -87,9 +87,6 @@
     <ClCompile Include="..\Classes\HelloWorldScene.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Game\TimeMechine.cpp">
-      <Filter>Classes\Game</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\GameScene\MainScene.cpp">
       <Filter>Classes\GameScene</Filter>
     </ClCompile>
@@ -141,6 +138,18 @@
     <ClCompile Include="..\Classes\DataModel\GameEventBase.cpp">
       <Filter>Classes\DataModel</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\DataModel\City.cpp">
+      <Filter>Classes\DataModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\DataModel\Generalcpp.cpp">
+      <Filter>Classes\DataModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\DataModel\GeneralManager.cpp">
+      <Filter>Classes\DataModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game\TimeMachine.cpp">
+      <Filter>Classes\Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -154,9 +163,6 @@
     </ClInclude>
     <ClInclude Include="..\Classes\DataModel\BaseModel.h">
       <Filter>Classes\DataModel</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Game\TimeMechine.h">
-      <Filter>Classes\Game</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\GameScene\MainScene.h">
       <Filter>Classes\GameScene</Filter>
@@ -255,10 +261,28 @@
       <Filter>Classes\Game</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\DataModel\GameEventBase.h">
-		<Filter>Classes\DataModel</Filter>
-	</ClInclude>
+      <Filter>Classes\DataModel</Filter>
+    </ClInclude>
     <ClInclude Include="General.h">
       <Filter>Classes\DataModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DataModel\City.h">
+      <Filter>Classes\DataModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DataModel\Constants.h">
+      <Filter>Classes\DataModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DataModel\Country.h">
+      <Filter>Classes\DataModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DataModel\General.h">
+      <Filter>Classes\DataModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DataModel\GeneralManager.h">
+      <Filter>Classes\DataModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\TimeMachine.h">
+      <Filter>Classes\Game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
