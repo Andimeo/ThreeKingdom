@@ -2,17 +2,18 @@
 #include "GameScene/MainScene.h"
 #include "Game/TimeMachine.h"
 #include "SimpleAudioEngine.h"
+#include "GameScene/MessageDialog.h"
+
 #include "Game/GameLogicController.h"
 #include "Game/HistoryEventLogicController.h"
+
 USING_NS_CC;
 
-AppDelegate::AppDelegate() {
-
-}
+AppDelegate::AppDelegate() 
+{ }
 
 AppDelegate::~AppDelegate() 
-{
-}
+{ }
 
 bool AppDelegate::applicationDidFinishLaunching() {
     // initialize director
@@ -36,6 +37,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 	curtime.month =1;
 	curtime.day = 1;
 	curtime.hour = 0;
+	MessageDialog::getInstance();
 	TimeMachine::getInstance()->start(curtime);
     // run
     director->runWithScene(scene);

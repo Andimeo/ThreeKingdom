@@ -3,12 +3,17 @@
 #include "CocoStudio.h"
 #include "ui/CocosGUI.h"
 #include <string>
+
 USING_NS_CC;
+
 class MessageDialog : public Layer
 {
 public :
+	static const std::string MESSAGE_NAME;
+
 	static MessageDialog* getInstance();
 	static void destroy();
+
 	void show();
 	void hide();
 	void setContent(std::string content);

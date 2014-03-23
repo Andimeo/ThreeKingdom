@@ -62,7 +62,7 @@ void MainScene::onTimeFly(long dayPassed, GameTime curtime){
 	}
 	else
 	{
-		//MessageDialog::getInstance()->show();
+		MessageDialog::getInstance()->show();
 	}
 	ComRender* pTitle =(ComRender*) pNode->getChildByTag(10046)->getComponent("title");
 	Text* year = (Text*)pTitle->getNode()->getChildByTag(12);

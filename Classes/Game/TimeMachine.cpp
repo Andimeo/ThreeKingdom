@@ -30,6 +30,9 @@ void TimeMachine::start(GameTime starttime)
 }
 void TimeMachine::stop()
 {
+	pause();
+	delete s_TimeMachine;
+	s_TimeMachine = NULL;
 }
 void TimeMachine::pause()
 {

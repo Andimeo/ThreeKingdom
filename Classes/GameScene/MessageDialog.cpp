@@ -6,6 +6,7 @@ using namespace cocostudio;
 using namespace cocos2d::ui;
 
 static MessageDialog* s_MessageDialog = NULL;
+const std::string MessageDialog::MESSAGE_NAME = "MessageDialog";
 bool MessageDialog::init()
 {
 	if(!Layer::init())
@@ -18,14 +19,10 @@ bool MessageDialog::init()
 }
 
 MessageDialog::MessageDialog()
-{
-
-}
+{ }
 
 MessageDialog::~MessageDialog()
-{
-
-}
+{ }
 
 MessageDialog* MessageDialog::getInstance()
 {

@@ -9,5 +9,5 @@
 
 // C RunTime Header Files
 #include "CCStdC.h"
-
+#pragma warning (disable : 4204)
 #endif    // __MAIN_H__
