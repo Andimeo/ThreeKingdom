@@ -8,7 +8,11 @@ public:
 	int month;
 	int day;
 	int hour;
-
+	bool operator > (GameTime other)
+	{
+		return ((year * 12  + month)  * 30 + day ) * 24 >
+			((other.year *  12 + other.month) * 30 + day ) * 24;
+	}
 	void set_time(int year, int month, int day, int hour) {
 		this->year = year;
 		this->month = month;

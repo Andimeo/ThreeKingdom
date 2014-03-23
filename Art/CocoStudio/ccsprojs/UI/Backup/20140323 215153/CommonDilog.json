@@ -244,7 +244,7 @@
       "classname": "Panel",
       "name": "root",
       "ZOrder": 0,
-      "actiontag": 20,
+      "actiontag": -1,
       "anchorPointX": 0,
       "anchorPointY": 0,
       "classType": "Panel",

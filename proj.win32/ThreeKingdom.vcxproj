@@ -141,6 +141,7 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
     <ClCompile Include="..\Classes\DataModel\GeneralManager.cpp" />
     <ClCompile Include="..\Classes\GameScene\MainScene.cpp" />
     <ClCompile Include="..\Classes\GameScene\MessageDialog.cpp" />
+    <ClCompile Include="..\Classes\Game\Command\Command.cpp" />
     <ClCompile Include="..\Classes\Game\GameLogicController.cpp" />
     <ClCompile Include="..\Classes\Game\HistoryEventLogicController.cpp" />
     <ClCompile Include="..\Classes\Game\TimeMachine.cpp" />
@@ -158,6 +159,7 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
     <ClInclude Include="..\Classes\DataModel\GeneralManager.h" />
     <ClInclude Include="..\Classes\GameScene\MainScene.h" />
     <ClInclude Include="..\Classes\GameScene\MessageDialog.h" />
+    <ClInclude Include="..\Classes\Game\Command\Command.h" />
     <ClInclude Include="..\Classes\Game\GameLogicController.h" />
     <ClInclude Include="..\Classes\Game\HistoryEventLogicController.h" />
     <ClInclude Include="..\Classes\Game\TimeMachine.h" />

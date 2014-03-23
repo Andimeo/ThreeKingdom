@@ -1,7 +1,10 @@
 # Ignore thumbnails created by windows
 Thumbs.db
-Art/ThreeKindom/Backup
-Art/ThreeKindom/Export
+Backup
+Ruler
+Export
+FileInfo.Export
+Art/Resources
 # Ignore files build by Visual Studio
 *.obj
 *.exe

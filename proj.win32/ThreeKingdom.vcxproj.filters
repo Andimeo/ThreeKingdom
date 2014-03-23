@@ -22,6 +22,9 @@
     <Filter Include="Classes\Utility">
       <UniqueIdentifier>{85a0b498-0a38-41cc-a1c6-b4389ef59968}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes\Game\Command">
+      <UniqueIdentifier>{48d1f2c4-033c-4c29-a009-3e60e7772366}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -62,6 +65,9 @@
     </ClCompile>
     <ClCompile Include="..\Classes\DataModel\Country.cpp">
       <Filter>Classes\DataModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game\Command\Command.cpp">
+      <Filter>Classes\Game\Command</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +118,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\Utility\CommonSet.h">
       <Filter>Classes\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\Command\Command.h">
+      <Filter>Classes\Game\Command</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

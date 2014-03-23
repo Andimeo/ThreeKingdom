@@ -14,7 +14,7 @@ public :
 	static MessageDialog* getInstance();
 	static void destroy();
 
-	void show();
+	void show(const std::string& message);
 	void hide();
 	void setContent(std::string content);
 private:

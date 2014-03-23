@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<UIProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectDir>C:\Users\Administrator\Desktop\ThreeKindom\CocoStudio\ccsprojs\UI</ProjectDir>
+  <Version>1.3.0.0</Version>
+  <Resources>C:\Users\Administrator\Desktop\ThreeKindom\CocoStudio\ccsprojs\UI\Resources</Resources>
+  <Name>ThreeKindom</Name>
+  <JsonFileName>ThreeKindom.json</JsonFileName>
+  <JsonFolder>C:\Users\Administrator\Desktop\ThreeKindom\CocoStudio\ccsprojs\UI\Json</JsonFolder>
+  <JsonList>
+    <string>CommonDilog.json</string>
+    <string>Map.json</string>
+    <string>MapMenu.json</string>
+  </JsonList>
+  <CanvasSize>
+    <Width>960</Width>
+    <Height>640</Height>
+  </CanvasSize>
+  <filePath>C:\Users\Administrator\Desktop\ThreeKindom\CocoStudio\ccsprojs\UI\ThreeKindom.xml.ui</filePath>
+  <ProjectType>UIProject</ProjectType>
+  <ResRelativePath />
+  <imageFileList />
+  <JsonSuffix>.json</JsonSuffix>
+  <CurrentUIJson>MapMenu.json</CurrentUIJson>
+</UIProject>

@@ -58,6 +58,7 @@ void MessageDialog::hide()
 
 void MessageDialog::setContent(std::string content){
 	Widget* contentWidget = mWidget->getChildByName("dialog")->getChildByName("message");
+	ImageView* p;
 	Text* message = dynamic_cast<Text*> (contentWidget);
 	if (nullptr != message){
 		message->setText(content);
