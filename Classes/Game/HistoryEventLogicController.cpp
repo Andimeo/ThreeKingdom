@@ -74,7 +74,7 @@ void HistoryEventLogicController::initHistory(){
 
 	mLastEventIterator = mAllHistory.begin();
 
-	TimeMechine::getInstance()->addTimeChangeListener(this);
+	TimeMachine::getInstance()->addTimeChangeListener(this);
 }
 
 void HistoryEventLogicController::handleHistoryEvent(GameEventBase* event){

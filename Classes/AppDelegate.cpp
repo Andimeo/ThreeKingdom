@@ -1,6 +1,6 @@
 #include "AppDelegate.h"
 #include "GameScene/MainScene.h"
-#include "Game/TimeMechine.h"
+#include "Game/TimeMachine.h"
 #include "SimpleAudioEngine.h"
 #include "Game/GameLogicController.h"
 #include "Game/HistoryEventLogicController.h"
@@ -36,7 +36,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 	curtime.month =1;
 	curtime.day = 1;
 	curtime.hour = 0;
-	TimeMechine::getInstance()->start(curtime);
+	TimeMachine::getInstance()->start(curtime);
     // run
     director->runWithScene(scene);
 

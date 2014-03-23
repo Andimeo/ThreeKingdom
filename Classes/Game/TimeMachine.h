@@ -13,16 +13,15 @@ public :
 	}
 
 	virtual void onTimeChange(GameTime curtime) = 0;
-	virtual void onTimeFly(long dayPassed, GameTime curtime) = 0;
 };
 
-class TimeMechine 
+class TimeMachine 
 {
 private:
-	TimeMechine(void);
-	~TimeMechine(void);
+	TimeMachine(void);
+	~TimeMachine(void);
 public:
-	static TimeMechine* getInstance();
+	static TimeMachine* getInstance();
 public:
 	void start(GameTime starttime);
 	void stop();
@@ -38,8 +37,6 @@ public:
 	{
 		mTimeSpeed = framesPerHour;
 	}
-
-	void timeFly(long days);
 public:
 	void update(float dt);
 private:

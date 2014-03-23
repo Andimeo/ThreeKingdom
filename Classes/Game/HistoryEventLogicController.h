@@ -1,5 +1,5 @@
 #pragma once
-#include "TimeMechine.h"
+#include "TimeMachine.h"
 #include "DataModel/GameEventBase.h"
 #include <list>
 #include <string>

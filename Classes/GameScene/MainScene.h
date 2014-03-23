@@ -1,6 +1,6 @@
 #pragma once 
 #include "cocos2d.h"
-#include "../Game/TimeMechine.h"
+#include "../Game/TimeMachine.h"
 
 USING_NS_CC;
 
