@@ -19,63 +19,6 @@
     <Filter Include="Classes\GameScene">
       <UniqueIdentifier>{c86c77e5-572a-4d22-b5dc-3a02007654aa}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\PureMVC">
-      <UniqueIdentifier>{492b39f2-eb2f-4e25-8353-f58988c4917e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\PureMVC\include">
-      <UniqueIdentifier>{9db31f5b-cccb-4023-add0-c213f98d4ab1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\PureMVC\src">
-      <UniqueIdentifier>{743e67e5-3deb-4f9a-a5d3-542608254228}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\PureMVC\include\Core">
-      <UniqueIdentifier>{4efb49d3-a508-4970-a22c-6b5c3888164b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\PureMVC\include\Interfaces">
-      <UniqueIdentifier>{4c11e125-5981-48b8-b455-bb8a2830b098}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\PureMVC\include\Patterns">
-      <UniqueIdentifier>{0954c9e7-9ec5-46c4-9b89-2b9bf69affcc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\PureMVC\include\Patterns\Command">
-      <UniqueIdentifier>{1dca966e-c8bb-470e-8ad8-8380d2577d9e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\PureMVC\include\Patterns\Facade">
-      <UniqueIdentifier>{d28edf2c-dd25-4264-95c2-4c8c11848036}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\PureMVC\include\Patterns\Iterator">
-      <UniqueIdentifier>{085c9834-a3fc-4900-a365-ce36edd8672b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\PureMVC\include\Patterns\Mediator">
-      <UniqueIdentifier>{c754fdc0-9424-43e5-972d-5a8170dfb469}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\PureMVC\include\Patterns\Observer">
-      <UniqueIdentifier>{b0541aac-fda0-4946-b700-50233f2381c1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\PureMVC\include\Patterns\Proxy">
-      <UniqueIdentifier>{b3a8995a-7e21-420f-a2a8-1205a3c6a49d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\PureMVC\src\Core">
-      <UniqueIdentifier>{3c421b52-548d-453e-a548-4d249b1adebb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\PureMVC\src\Patterns">
-      <UniqueIdentifier>{6bb63bd1-9816-40d5-b976-6f0c23dd8e81}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\PureMVC\src\Patterns\Command">
-      <UniqueIdentifier>{2d368e88-eb67-4c0d-9ff1-555009923a67}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\PureMVC\src\Patterns\Facade">
-      <UniqueIdentifier>{71addf68-f220-42c2-a64d-e81f82ef07c7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\PureMVC\src\Patterns\Mediator">
-      <UniqueIdentifier>{af091383-cb31-449b-9215-2fa790282e96}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\PureMVC\src\Patterns\Observer">
-      <UniqueIdentifier>{b55c80bf-ead0-44f0-95bd-4f5192cc7326}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\PureMVC\src\Patterns\Proxy">
-      <UniqueIdentifier>{4d04fb48-1663-476d-bd60-5ec22a01b151}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -93,42 +36,6 @@
     <ClCompile Include="..\Classes\GameScene\MessageDialog.cpp">
       <Filter>Classes\GameScene</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\PureMVC\src\PureMVC.cpp">
-      <Filter>Classes\PureMVC\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\PureMVC\src\Core\Controller.cpp">
-      <Filter>Classes\PureMVC\src\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\PureMVC\src\Core\Model.cpp">
-      <Filter>Classes\PureMVC\src\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\PureMVC\src\Core\View.cpp">
-      <Filter>Classes\PureMVC\src\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\PureMVC\src\Patterns\Command\MacroCommand.cpp">
-      <Filter>Classes\PureMVC\src\Patterns\Command</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\PureMVC\src\Patterns\Command\SimpleCommand.cpp">
-      <Filter>Classes\PureMVC\src\Patterns\Command</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\PureMVC\src\Patterns\Facade\Facade.cpp">
-      <Filter>Classes\PureMVC\src\Patterns\Facade</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\PureMVC\src\Patterns\Mediator\Mediator.cpp">
-      <Filter>Classes\PureMVC\src\Patterns\Mediator</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\PureMVC\src\Patterns\Proxy\Proxy.cpp">
-      <Filter>Classes\PureMVC\src\Patterns\Proxy</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\PureMVC\src\Patterns\Observer\Notification.cpp">
-      <Filter>Classes\PureMVC\src\Patterns\Observer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\PureMVC\src\Patterns\Observer\Notifier.cpp">
-      <Filter>Classes\PureMVC\src\Patterns\Observer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\PureMVC\src\CocosMVC.cpp">
-      <Filter>Classes\PureMVC\src</Filter>
-	</ClCompile>
     <ClCompile Include="..\Classes\Game\GameLogicController.cpp">
       <Filter>Classes\Game</Filter>
     </ClCompile>
@@ -169,90 +76,6 @@
     </ClInclude>
     <ClInclude Include="..\Classes\GameScene\MessageDialog.h">
       <Filter>Classes\GameScene</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\Core\Controller.hpp">
-      <Filter>Classes\PureMVC\include\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\Core\Model.hpp">
-      <Filter>Classes\PureMVC\include\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\Core\View.hpp">
-      <Filter>Classes\PureMVC\include\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\Interfaces\IAggregate.hpp">
-      <Filter>Classes\PureMVC\include\Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\Interfaces\ICommand.hpp">
-      <Filter>Classes\PureMVC\include\Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\Interfaces\IController.hpp">
-      <Filter>Classes\PureMVC\include\Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\Interfaces\IFacade.hpp">
-      <Filter>Classes\PureMVC\include\Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\Interfaces\IIterator.hpp">
-      <Filter>Classes\PureMVC\include\Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\Interfaces\IMediator.hpp">
-      <Filter>Classes\PureMVC\include\Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\Interfaces\IModel.hpp">
-      <Filter>Classes\PureMVC\include\Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\Interfaces\INotification.hpp">
-      <Filter>Classes\PureMVC\include\Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\Interfaces\INotifier.hpp">
-      <Filter>Classes\PureMVC\include\Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\Interfaces\IObserver.hpp">
-      <Filter>Classes\PureMVC\include\Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\Interfaces\IProxy.hpp">
-      <Filter>Classes\PureMVC\include\Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\Interfaces\IView.hpp">
-      <Filter>Classes\PureMVC\include\Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\Patterns\Command\DelegateCommand.hpp">
-      <Filter>Classes\PureMVC\include\Patterns\Command</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\Patterns\Command\MacroCommand.hpp">
-      <Filter>Classes\PureMVC\include\Patterns\Command</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\Patterns\Command\SimpleCommand.hpp">
-      <Filter>Classes\PureMVC\include\Patterns\Command</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\Patterns\Facade\Facade.hpp">
-      <Filter>Classes\PureMVC\include\Patterns\Facade</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\Patterns\Iterator\Iterator.hpp">
-      <Filter>Classes\PureMVC\include\Patterns\Iterator</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\Patterns\Mediator\Mediator.hpp">
-      <Filter>Classes\PureMVC\include\Patterns\Mediator</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\Patterns\Observer\Notification.hpp">
-      <Filter>Classes\PureMVC\include\Patterns\Observer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\Patterns\Observer\Notifier.hpp">
-      <Filter>Classes\PureMVC\include\Patterns\Observer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\Patterns\Observer\Observer.hpp">
-      <Filter>Classes\PureMVC\include\Patterns\Observer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\Patterns\Proxy\Proxy.hpp">
-      <Filter>Classes\PureMVC\include\Patterns\Proxy</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\PureMVC.hpp">
-      <Filter>Classes\PureMVC\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\src\Common.hpp">
-      <Filter>Classes\PureMVC\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\PureMVC\include\CocosMVC.h">
-      <Filter>Classes\PureMVC\include</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Game\GameLogicController.h">
       <Filter>Classes\Game</Filter>

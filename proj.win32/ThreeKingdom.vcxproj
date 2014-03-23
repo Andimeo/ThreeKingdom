@@ -69,8 +69,8 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(EngineRoot)cocos\audio\include;$(EngineRoot)external;$(EngineRoot)external\chipmunk\include\chipmunk;$(EngineRoot)extensions;..\Classes;..;$(EngineRoot)cocos\editor-support\cocosbuilder;$(EngineRoot)cocos\editor-support\cocostudio;$(EngineRoot)cocos\editor-support\spine;$(EngineRoot)cocos\ui;$(EngineRoot)cocos\editor-support;$(EngineRoot)cocos;..\Classes\PureMVC\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USE_MATH_DEFINES;GL_GLEXT_PROTOTYPES;CC_ENABLE_CHIPMUNK_INTEGRATION=1;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;PUREMVC_NO_AUTO_IMPORT;PUREMVC_NO_IMPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(EngineRoot)cocos\audio\include;$(EngineRoot)external;$(EngineRoot)external\chipmunk\include\chipmunk;$(EngineRoot)extensions;..\Classes;..;$(EngineRoot)cocos\editor-support\cocosbuilder;$(EngineRoot)cocos\editor-support\cocostudio;$(EngineRoot)cocos\editor-support\spine;$(EngineRoot)cocos\ui;$(EngineRoot)cocos\editor-support;$(EngineRoot)cocos;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USE_MATH_DEFINES;GL_GLEXT_PROTOTYPES;CC_ENABLE_CHIPMUNK_INTEGRATION=1;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -144,18 +144,6 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
     <ClCompile Include="..\Classes\Game\HistoryEventLogicController.cpp" />
     <ClCompile Include="..\Classes\Game\TimeMachine.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
-    <ClCompile Include="..\Classes\PureMVC\src\CocosMVC.cpp" />
-    <ClCompile Include="..\Classes\PureMVC\src\Core\Controller.cpp" />
-    <ClCompile Include="..\Classes\PureMVC\src\Core\Model.cpp" />
-    <ClCompile Include="..\Classes\PureMVC\src\Core\View.cpp" />
-    <ClCompile Include="..\Classes\PureMVC\src\Patterns\Command\MacroCommand.cpp" />
-    <ClCompile Include="..\Classes\PureMVC\src\Patterns\Command\SimpleCommand.cpp" />
-    <ClCompile Include="..\Classes\PureMVC\src\Patterns\Facade\Facade.cpp" />
-    <ClCompile Include="..\Classes\PureMVC\src\Patterns\Mediator\Mediator.cpp" />
-    <ClCompile Include="..\Classes\PureMVC\src\Patterns\Observer\Notification.cpp" />
-    <ClCompile Include="..\Classes\PureMVC\src\Patterns\Observer\Notifier.cpp" />
-    <ClCompile Include="..\Classes\PureMVC\src\Patterns\Proxy\Proxy.cpp" />
-    <ClCompile Include="..\Classes\PureMVC\src\PureMVC.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -173,34 +161,6 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
     <ClInclude Include="..\Classes\Game\HistoryEventLogicController.h" />
     <ClInclude Include="..\Classes\Game\TimeMachine.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
-    <ClInclude Include="..\Classes\PureMVC\include\CocosMVC.h" />
-    <ClInclude Include="..\Classes\PureMVC\include\Core\Controller.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\include\Core\Model.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\include\Core\View.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\include\Interfaces\IAggregate.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\include\Interfaces\ICommand.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\include\Interfaces\IController.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\include\Interfaces\IFacade.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\include\Interfaces\IIterator.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\include\Interfaces\IMediator.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\include\Interfaces\IModel.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\include\Interfaces\INotification.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\include\Interfaces\INotifier.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\include\Interfaces\IObserver.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\include\Interfaces\IProxy.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\include\Interfaces\IView.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\include\Patterns\Command\DelegateCommand.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\include\Patterns\Command\MacroCommand.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\include\Patterns\Command\SimpleCommand.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\include\Patterns\Facade\Facade.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\include\Patterns\Iterator\Iterator.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\include\Patterns\Mediator\Mediator.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\include\Patterns\Observer\Notification.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\include\Patterns\Observer\Notifier.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\include\Patterns\Observer\Observer.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\include\Patterns\Proxy\Proxy.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\include\PureMVC.hpp" />
-    <ClInclude Include="..\Classes\PureMVC\src\Common.hpp" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>

@@ -58,16 +58,11 @@ void MainScene::onTimeFly(long dayPassed, GameTime curtime){
 		{
 			pHero->getAnimation()->play("attack"); 
 		}
-		auto data = DialogData::create();
-		data->mIsShow = false;
-		Facade::getInstance().sendNotification("MessageDialog",data);
+		MessageDialog::getInstance()->hide();
 	}
 	else
 	{
-		auto data = DialogData::create();
-		data->mIsShow = true;
-		Facade::getInstance().sendNotification("MessageDialog",data);
-		//MessageDialog::getInstance()->show();
+		MessageDialog::getInstance()->show();
 	}
 	ComRender* pTitle =(ComRender*) pNode->getChildByTag(10046)->getComponent("title");
 	Text* year = (Text*)pTitle->getNode()->getChildByTag(12);

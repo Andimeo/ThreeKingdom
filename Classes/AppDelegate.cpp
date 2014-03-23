@@ -2,7 +2,6 @@
 #include "GameScene/MainScene.h"
 #include "Game/TimeMachine.h"
 #include "SimpleAudioEngine.h"
-#include "PureMVC.hpp"
 #include "GameScene/MessageDialog.h"
 
 #include "Game/GameLogicController.h"
@@ -11,14 +10,10 @@
 USING_NS_CC;
 
 AppDelegate::AppDelegate() 
-{
-	PureMVC::createCache();
-}
+{ }
 
 AppDelegate::~AppDelegate() 
-{
-	PureMVC::cleanCache();
-}
+{ }
 
 bool AppDelegate::applicationDidFinishLaunching() {
     // initialize director

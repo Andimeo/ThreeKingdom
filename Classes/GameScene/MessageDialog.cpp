@@ -19,14 +19,10 @@ bool MessageDialog::init()
 }
 
 MessageDialog::MessageDialog()
-{
-	Facade::getInstance().registerMediator(this);
-}
+{ }
 
 MessageDialog::~MessageDialog()
-{
-	Facade::getInstance().removeMediator(MESSAGE_NAME);
-}
+{ }
 
 MessageDialog* MessageDialog::getInstance()
 {
@@ -58,33 +54,6 @@ void MessageDialog::hide()
 	{
 		this->getParent()->removeChild(this);
 	}
-}
-
-void MessageDialog::handleNotification( INotification const& notification )
-{
-	DialogData* data = (DialogData*)notification.getBody();
-	if(data->mIsShow)
-	{
-		show();
-	}
-	else
-	{
-		hide();
-	}
-}
-
-IMediator::NotificationNames MessageDialog::listNotificationInterests( void ) const
-{
-	typedef std::list<NotificationNames::element_type::type> list_t;
-	list_t namelist;
-	namelist.push_back(MESSAGE_NAME);
-	typedef StdContainerAggregate<list_t> result_t;
-	return NotificationNames(new result_t(namelist));
-}
-
-inline std::string const& MessageDialog::getMediatorName( void ) const
-{
-	return MESSAGE_NAME;
 }
 
 void MessageDialog::setContent(std::string content){

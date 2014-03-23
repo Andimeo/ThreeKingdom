@@ -1,6 +1,7 @@
 #include "GeneralManager.h"
 #include "General.h"
 
+GeneralManager GeneralManager::instance;
 GeneralManager GeneralManager::getInstance(){
 	return instance;
 }
