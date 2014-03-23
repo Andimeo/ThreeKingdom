@@ -1,6 +1,9 @@
 #pragma once
 #include "cocos2d.h"
 #include "CocosMVC.h"
+#include "CocoStudio.h"
+#include "ui/CocosGUI.h"
+#include <string>
 
 USING_NS_CC;
 
@@ -25,6 +28,9 @@ public :
 
 	void show();
 	void hide();
+	void setContent(std::string content);
+private:
+	ui::Widget* mWidget;
 protected:
 	MessageDialog();
 	~MessageDialog();

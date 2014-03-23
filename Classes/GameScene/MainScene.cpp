@@ -42,6 +42,10 @@ void MainScene::menuStartCallback( cocos2d::Ref* pSender )
 
 void MainScene::onTimeChange( GameTime curtime )
 {
+	
+}
+
+void MainScene::onTimeFly(long dayPassed, GameTime curtime){
 	auto pNode = this->getChildByTag(1);
 
 	if(curtime.day % 2 ==0)
@@ -63,6 +67,7 @@ void MainScene::onTimeChange( GameTime curtime )
 		auto data = DialogData::create();
 		data->mIsShow = true;
 		Facade::getInstance().sendNotification("MessageDialog",data);
+		//MessageDialog::getInstance()->show();
 	}
 	ComRender* pTitle =(ComRender*) pNode->getChildByTag(10046)->getComponent("title");
 	Text* year = (Text*)pTitle->getNode()->getChildByTag(12);

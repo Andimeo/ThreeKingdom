@@ -134,8 +134,11 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\DataModel\GameEventBase.cpp" />
     <ClCompile Include="..\Classes\GameScene\MainScene.cpp" />
     <ClCompile Include="..\Classes\GameScene\MessageDialog.cpp" />
+    <ClCompile Include="..\Classes\Game\GameLogicController.cpp" />
+    <ClCompile Include="..\Classes\Game\HistoryEventLogicController.cpp" />
     <ClCompile Include="..\Classes\Game\TimeMechine.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
     <ClCompile Include="..\Classes\PureMVC\src\CocosMVC.cpp" />
@@ -155,8 +158,11 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\DataModel\BaseModel.h" />
+    <ClInclude Include="..\Classes\DataModel\GameEventBase.h" />
     <ClInclude Include="..\Classes\GameScene\MainScene.h" />
     <ClInclude Include="..\Classes\GameScene\MessageDialog.h" />
+    <ClInclude Include="..\Classes\Game\GameLogicController.h" />
+    <ClInclude Include="..\Classes\Game\HistoryEventLogicController.h" />
     <ClInclude Include="..\Classes\Game\TimeMechine.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="..\Classes\PureMVC\include\CocosMVC.h" />
@@ -188,6 +194,7 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
     <ClInclude Include="..\Classes\PureMVC\include\PureMVC.hpp" />
     <ClInclude Include="..\Classes\PureMVC\src\Common.hpp" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="General.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\cocos2d\cocos\2d\cocos2d.vcxproj">

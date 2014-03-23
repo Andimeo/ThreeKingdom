@@ -131,6 +131,15 @@
     </ClCompile>
     <ClCompile Include="..\Classes\PureMVC\src\CocosMVC.cpp">
       <Filter>Classes\PureMVC\src</Filter>
+	</ClCompile>
+    <ClCompile Include="..\Classes\Game\GameLogicController.cpp">
+      <Filter>Classes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game\HistoryEventLogicController.cpp">
+      <Filter>Classes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\DataModel\GameEventBase.cpp">
+      <Filter>Classes\DataModel</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -238,6 +247,18 @@
     </ClInclude>
     <ClInclude Include="..\Classes\PureMVC\include\CocosMVC.h">
       <Filter>Classes\PureMVC\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\GameLogicController.h">
+      <Filter>Classes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\HistoryEventLogicController.h">
+      <Filter>Classes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DataModel\GameEventBase.h">
+		<Filter>Classes\DataModel</Filter>
+	</ClInclude>
+    <ClInclude Include="General.h">
+      <Filter>Classes\DataModel</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
