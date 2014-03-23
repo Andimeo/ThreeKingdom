@@ -48,14 +48,14 @@
     <ClCompile Include="..\Classes\DataModel\City.cpp">
       <Filter>Classes\DataModel</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\DataModel\Generalcpp.cpp">
-      <Filter>Classes\DataModel</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\DataModel\GeneralManager.cpp">
       <Filter>Classes\DataModel</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Game\TimeMachine.cpp">
       <Filter>Classes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\DataModel\General.cpp">
+      <Filter>Classes\DataModel</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -84,9 +84,6 @@
       <Filter>Classes\Game</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\DataModel\GameEventBase.h">
-      <Filter>Classes\DataModel</Filter>
-    </ClInclude>
-    <ClInclude Include="General.h">
       <Filter>Classes\DataModel</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\DataModel\City.h">
