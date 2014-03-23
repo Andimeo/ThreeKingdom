@@ -135,9 +135,8 @@ City City::set_generals(const CommonSet<int>& generals) {
 int City::get_soldiers() {
 	int result = this->unassigned_soldiers;
 	GeneralManager manager = GeneralManager::getInstance();
-	for(set<int>::iterator iter = this->generals.begin(); iter != this->generals.end(); iter++ ) {
-		result += manager.get(*iter).get_soldiers();
-	}
+	for(auto general : generals)
+		result += manager.get(general).get_soldiers();
 	return result;
 }
 
@@ -240,11 +239,11 @@ int City::add_general(int general) {
 	return this->generals.size();
 }
 
-int City::add_generals(const CommonSet<int>& general_list) {
-	assert(this->generals.size() + general_list.size() <= City_Generals_Num);
-	for(auto iter = general_list.begin(); iter != general_list.end(); iter++ ) {
-		assert(!(this->generals.contains(*iter)));
-		this->generals.add(*iter);
+int City::add_generals(const CommonSet<int>& generals) {
+	assert(this->generals.size() + generals.size() <= City_Generals_Num);
+	for(auto general : generals) {
+		assert(!(this->generals.contains(general)));
+		this->generals.add(general);
 	}
 	return this->generals.size();
 }
@@ -255,10 +254,9 @@ int City::remove_general(int general) {
 	return this->generals.size();
 }
 
-int City::remove_generals(const CommonSet<int>& general_list) {
-	for(auto iter = general_list.begin(); iter != general_list.end(); iter++ ) {
-		assert(this->generals.contains(*iter));
-		this->remove_general(*iter);
+int City::remove_generals(const CommonSet<int>& generals) {
+	for(auto general : generals) {
+		this->remove_general(general);
 	}
 	return this->generals.size();
 }

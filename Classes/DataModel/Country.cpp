@@ -50,9 +50,9 @@ int Country::add_city(int city) {
 }
 
 int Country::add_citys(const CommonSet<int>& citys) {
-	for(auto iter = citys.begin(); iter != citys.end(); iter++ ) {
-		assert(!(this->citys.add(*iter)));
-		this->citys.add(*iter);
+	for(auto city : citys) {
+		assert(!(this->citys.contains(city)));
+		this->citys.add(city);
 	}
 	return this->citys.size();
 }
@@ -64,9 +64,9 @@ int Country::remove_city(int city) {
 }
 
 int Country::remove_citys(const CommonSet<int>& citys) {
-	for(auto iter = citys.begin(); iter != citys.end(); iter++ ) {
-		assert(this->citys.contains(*iter));
-		this->citys.add(*iter);
+	for(auto city : citys) {
+		assert(this->citys.contains(city));
+		this->citys.add(city);
 	}
 	return this->citys.size();
 }

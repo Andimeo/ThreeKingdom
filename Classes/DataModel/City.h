@@ -70,9 +70,9 @@ public:
 	int add_people(int delta);
 	int add_disaster_proof(int delta);
 	int add_general(int general);
-	int add_generals(const CommonSet<int>& general_list);
+	int add_generals(const CommonSet<int>& generals);
 	int remove_general(int general);
-	int remove_generals(const CommonSet<int>& general_list);
+	int remove_generals(const CommonSet<int>& generals);
 
 	int add_unassigned_soldiers(int delta);
 private:
