@@ -136,7 +136,7 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\DataModel\City.cpp" />
     <ClCompile Include="..\Classes\DataModel\GameEventBase.cpp" />
-    <ClCompile Include="..\Classes\DataModel\Generalcpp.cpp" />
+    <ClCompile Include="..\Classes\DataModel\General.cpp" />
     <ClCompile Include="..\Classes\DataModel\GeneralManager.cpp" />
     <ClCompile Include="..\Classes\GameScene\MainScene.cpp" />
     <ClCompile Include="..\Classes\GameScene\MessageDialog.cpp" />
@@ -202,7 +202,6 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
     <ClInclude Include="..\Classes\PureMVC\include\PureMVC.hpp" />
     <ClInclude Include="..\Classes\PureMVC\src\Common.hpp" />
     <ClInclude Include="main.h" />
-    <ClInclude Include="General.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\cocos2d\cocos\2d\cocos2d.vcxproj">
